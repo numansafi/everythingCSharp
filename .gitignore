@@ -501,5 +501,7 @@ fabric.properties
 .ionide
 
 .DS_Store
+.idea/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,csharp,rider,visualstudiocode
