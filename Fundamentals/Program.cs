@@ -9,9 +9,15 @@ class Program
         var b = 10;
         Console.WriteLine(a + b);
 
-        Console.WriteLine("[S]ee all Todo items");
+        var seeTodos = "[S]ee all Todo items";
+        PrintSelectedOption(seeTodos);
         var userInput = Console.ReadLine();
         Console.WriteLine($"User input: {userInput}");
+        
+    }
 
+    private static void PrintSelectedOption(string selectedOption)
+    {
+        Console.WriteLine($"Selected Option: {selectedOption}");
     }
 }
