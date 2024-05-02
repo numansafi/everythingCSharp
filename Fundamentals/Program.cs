@@ -4,18 +4,25 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-        var a = 5;
-        var b = 10;
-        Console.WriteLine(a + b);
-
-        var seeTodos = "[S]ee all Todo items";
-        PrintSelectedOption(seeTodos);
-        var userInput = Console.ReadLine();
-        Console.WriteLine($"User input: {userInput}");
-
-        Console.WriteLine(Add(1,2));
+        // Console.WriteLine("Hello, World!");
+        // var a = 5;
+        // var b = 10;
+        // Console.WriteLine(a + b);
+        //
+        // var seeTodos = "[S]ee all Todo items";
+        // PrintSelectedOption(seeTodos);
+        // var userInput = Console.ReadLine();
+        // Console.WriteLine($"User input: {userInput}");
+        //
+        // Console.WriteLine(Add(1,2));
         
+        // Parsing
+        Console.WriteLine("Provide a number: ");
+        var userInput = Console.ReadLine()!;
+        var number = int.Parse(userInput);
+        Console.WriteLine(number);
+
+
     }
 
     private static void PrintSelectedOption(string selectedOption)
