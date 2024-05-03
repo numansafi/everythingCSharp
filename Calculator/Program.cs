@@ -5,19 +5,25 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello There!");
-        var num1 = decimal.Parse(GetNumber("Input the first number: ")!);
-        var num2 = decimal.Parse(GetNumber("Input second number: ")!);
+        var num1 = GetNumber("Input the first number: ");
+        var num2 = GetNumber("Input second number: ");
         
         OperationResults(num1, num2);
 
 
     }
     // Get userInput
-    private static string? GetNumber(string question)
+    private static decimal GetNumber(string question)
     {
-        Console.WriteLine(question);
-        var userInput = Console.ReadLine();
-        return userInput;
+        string userInput;
+        decimal num;
+        do
+        {
+            Console.WriteLine(question);
+            userInput = Console.ReadLine()!;
+        } while (!decimal.TryParse(userInput, out num));
+        System.Console.WriteLine(num);
+        return num;
     }
     
     // Operation to excecute
