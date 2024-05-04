@@ -43,7 +43,7 @@ class Program
         // }
 
         var numbers = new int[] { 1, 2, 3, 4 };
-        System.Console.WriteLine(IsWordPresentInCollection(new[] {"one", "two", "three"}, "three"));
+        Console.WriteLine(IsWordPresentInCollection(new[] {"one", "two", "three"}, "three"));
     }
 
     public static bool IsAnyWordLongerThan(int length, string[] words)
