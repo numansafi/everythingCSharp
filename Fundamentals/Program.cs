@@ -42,10 +42,37 @@ class Program
         //     Console.WriteLine(i);
         // }
 
+        // arrays
         var numbers = new int[] { 1, 2, 3, 4 };
-        Console.WriteLine(IsWordPresentInCollection(new[] {"one", "two", "three"}, "three"));
-    }
 
+        // Lists
+        var words = new List<string> {"one", "two", "three", "four", "five"};
+        words.Add("SIX");
+        words.Add("SIX");
+        words.Add("EIght");
+        words.RemoveAt(0);
+        words.Remove("two");
+
+        var upCase = GetOnlyUpperCaseWords(words);
+        foreach (var word in upCase)
+        {
+            System.Console.WriteLine(word);
+        }
+    }
+    public static List<string> GetOnlyUpperCaseWords(List<string> words)
+    {
+        var uppercaseWords = new List<string>();
+
+        foreach (var word in words)
+        {
+            if (!uppercaseWords.Contains(word) && word.All(char.IsLetter) && word.All(char.IsUpper))
+            {
+                uppercaseWords.Add(word);
+            }
+        }
+
+        return uppercaseWords;
+    }
     public static bool IsAnyWordLongerThan(int length, string[] words)
     {
         foreach (var word in words)
