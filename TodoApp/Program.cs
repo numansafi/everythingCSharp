@@ -7,6 +7,8 @@ Operations.DisplayWelcomeMessage();
 
 var optionsList = new[] { "S", "A", "R", "E" };
 
+// KIND OF WORKING SO FAR BUT THE LOGIC NEEDS FIXING
+
 bool isOptionInList;
 do
 {
