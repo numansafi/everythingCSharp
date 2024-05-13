@@ -46,18 +46,34 @@ class Program
         var numbers = new int[] { 1, 2, 3, 4 };
 
         // Lists
-        var words = new List<string> {"one", "two", "three", "four", "five"};
+        var words = new List<string> { "one", "two", "three", "four", "five" };
         words.Add("SIX");
         words.Add("SIX");
         words.Add("EIght");
         words.RemoveAt(0);
         words.Remove("two");
 
-        var upCase = GetOnlyUpperCaseWords(words);
-        foreach (var word in upCase)
+    }
+
+    // out keyword
+    public static List<int> GetPositiveNumbersOnly(int[] numbers, out int countOfNonPositiveNumbers)
+    {
+        countOfNonPositiveNumbers = 0;
+        var result = new List<int>();
+
+        foreach (var number in numbers)
         {
-            System.Console.WriteLine(word);
+            if (number > 0)
+            {
+                result.Add(number);
+            }
+            else
+            {
+                countOfNonPositiveNumbers++;
+            }
         }
+
+        return result;
     }
     public static List<string> GetOnlyUpperCaseWords(List<string> words)
     {
@@ -88,15 +104,15 @@ class Program
         var arr1 = numbers.GetLength(0);
         var arr2 = numbers.GetLength(1);
 
-        if ( arr1 == 0 || arr2 == 0) return -1;
+        if (arr1 == 0 || arr2 == 0) return -1;
 
-        int max = numbers[0,0];
+        int max = numbers[0, 0];
 
         for (int i = 0; i < arr1; i++)
         {
             for (int j = 0; j < arr2; j++)
             {
-                if (numbers[i,j] > max) max = numbers[i,j];
+                if (numbers[i, j] > max) max = numbers[i, j];
             }
         }
 
@@ -107,18 +123,18 @@ class Program
     {
         foreach (var word in words)
         {
-            if ( word == wordToBeChecked) return true;
+            if (word == wordToBeChecked) return true;
         }
 
         return false;
     }
     public static string BuildHelloString()
     {
-        var letters = new char[] { 'h','e','l','l','o'};
+        var letters = new char[] { 'h', 'e', 'l', 'l', 'o' };
         var result = "";
         for (int i = 0; i < letters.Length; ++i)
         {
-           result += letters[i];
+            result += letters[i];
         }
         return result;
     }
