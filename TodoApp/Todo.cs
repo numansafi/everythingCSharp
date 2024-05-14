@@ -16,6 +16,7 @@ public class Todo
 
     public void RemoveTodoItem(int index)
     {
+        Console.WriteLine($"Todo item removed: {TodoItems[index - 1]}");
         TodoItems.RemoveAt(index - 1);
     }
 
@@ -25,5 +26,14 @@ public class Todo
         {
             Console.WriteLine($"{i + 1}: {TodoItems[i]}");
         }
+    }
+
+    private bool isIndexValid(string indexFromUser, out int index)
+    {
+        var isNumber = int.TryParse(indexFromUser, out index);
+
+        if (!isNumber || index <= 0 || index > TodoItems.Count) return false;
+
+        return true;
     }
 }
