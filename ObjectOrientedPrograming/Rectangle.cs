@@ -10,18 +10,20 @@ class Rectangle
     Width = width;
     Height = height;
   }
-
-  public int CalculatePerimeter()
-  {
-    return 2 * Width + 2 * Height;
-  }
-
-  public int CalculateArea()
-  {
-    return Width * Height;
-  }
-
 } 
+
+class ShapeMeasurementCalculator()
+{
+    public int CalculateRectanglePerimeter(Rectangle rectangle )
+  {
+    return 2 * rectangle.Width + 2 * rectangle.Height;
+  }
+
+  public int CalculateArea(Rectangle rectangle)
+  {
+    return rectangle.Width * rectangle.Height;
+  }
+}
 
 
 
