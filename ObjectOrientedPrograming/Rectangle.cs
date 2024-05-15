@@ -1,12 +1,3 @@
-// OOP
-
-// An object(instance) of class DateTime has created
-//Console.WriteLine(pizzaDay23.DayOfWeek);
-
-//Console.WriteLine(pizzaDay24.DayOfWeek);
-
-// First class
-
 class Rectangle
 {
   // Fields of a class
@@ -19,7 +10,18 @@ class Rectangle
     Width = width;
     Height = height;
   }
-}
+
+  public int CalculatePerimeter()
+  {
+    return 2 * Width + 2 * Height;
+  }
+
+  public int CalculateArea()
+  {
+    return Width * Height;
+  }
+
+} 
 
 
 

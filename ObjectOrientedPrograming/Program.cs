@@ -9,7 +9,8 @@ var pizzaDay24 = pizzaDay23.AddYears(1);
 
 // First class
 var rectangle = new Rectangle(10, 5);
-System.Console.WriteLine(rectangle.Height);
+Console.WriteLine("Area: " + rectangle.CalculateArea());
+Console.WriteLine("Perimeter: " +rectangle.CalculatePerimeter());
 
 
 
