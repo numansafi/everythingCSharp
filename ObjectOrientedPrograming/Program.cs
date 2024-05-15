@@ -8,23 +8,8 @@ var pizzaDay24 = pizzaDay23.AddYears(1);
 //Console.WriteLine(pizzaDay24.DayOfWeek);
 
 // First class
-
 var rectangle = new Rectangle(10, 5);
 System.Console.WriteLine(rectangle.Height);
-
-class Rectangle
-{
-  // Fields of a class
-  public int Width;
-  public int Height;
-
-  // Constructor
-  public Rectangle(int width, int height)
-  {
-    Width = width;
-    Height = height;
-  }
-}
 
 
 
