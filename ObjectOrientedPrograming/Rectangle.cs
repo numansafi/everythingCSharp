@@ -14,16 +14,10 @@ class Rectangle
 
 class ShapeMeasurementCalculator()
 {
-    public int CalculateRectanglePerimeter(Rectangle rectangle )
-  {
-    return 2 * rectangle.Width + 2 * rectangle.Height;
-  }
+  public int CalculateRectanglePerimeter(Rectangle rectangle ) =>  2 * rectangle.Width + 2 * rectangle.Height;
 
-  public int CalculateArea(Rectangle rectangle)
-  {
-    return rectangle.Width * rectangle.Height;
-  }
+  public int CalculateArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;
 }
-
+ 
 
 
