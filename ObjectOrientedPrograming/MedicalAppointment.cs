@@ -19,10 +19,10 @@ public class MedicalAppointment
         Date = date;
     }
 
-    public MedicalAppointment(string patientName)
+    public MedicalAppointment(string patientName, int daysFromNow = 7)
     {
       _patientName = patientName;
-      Date = DateTime.Now.AddDays(7);
+      Date = DateTime.Now.AddDays(daysFromNow);
     }
 
     public void Reschedule(DateTime date)
