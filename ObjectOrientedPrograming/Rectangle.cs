@@ -18,6 +18,6 @@ class ShapeMeasurementCalculator()
 
   public int CalculateArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;
 }
-
+ 
 
 
