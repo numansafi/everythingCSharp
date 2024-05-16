@@ -1,30 +1,41 @@
 ﻿namespace ObjectOrientedPrograming;
 
+class MedicalAppointmentPrinter
+{
+  public void Print(MedicalAppointment medicalAppointment) 
+  {
+    Console.WriteLine($"Appoint will take place on {medicalAppointment.Date}");
+  }
+}
+
 public class MedicalAppointment
 {
   private string _patientName;
-  private DateTime _date;
+  public DateTime Date {get; private set;}
 
     public MedicalAppointment(string patientName, DateTime date)
     {
         _patientName = patientName;
-        _date = date;
+        Date = date;
     }
 
     public MedicalAppointment(string patientName)
     {
       _patientName = patientName;
-      _date = DateTime.Now.AddDays(7);
+      Date = DateTime.Now.AddDays(7);
     }
 
     public void Reschedule(DateTime date)
     {
-      _date = date;
+      Date = date;
+      var printer = new MedicalAppointmentPrinter();
+      // This keyword refers to the current instance of the class
+      printer.Print(this);
     }
 
     public void Reschedule(int month, int day)
     {
-      _date = new DateTime(_date.Year, month, day);
+      Date = new DateTime(Date.Year, month, day);
     }
 
 
