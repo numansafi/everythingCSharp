@@ -1,25 +1,22 @@
 class Rectangle
 {
   // Fields of a class
-  public int Width;
-  private int _height;
+  public int Width {get; private set;}
+  public int Height {get; private set;}
 
   // Constructor
   public Rectangle(int width, int height)
   {
     Width = width;
-    _height = height;
+    Height = height;
   }
-
-  public int GetHeight() => _height;
-  public void setHeight(int value) => _height = value;
 } 
 
 class ShapeMeasurementCalculator()
 {
-  public int CalculateRectanglePerimeter(Rectangle rectangle ) =>  2 * rectangle.Width + 2 * rectangle.GetHeight();
+  public int CalculateRectanglePerimeter(Rectangle rectangle ) =>  2 * rectangle.Width + 2 * rectangle.Height;
 
-  public int CalculateArea(Rectangle rectangle) => rectangle.Width * rectangle.GetHeight();
+  public int CalculateArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;
 }
  
 
