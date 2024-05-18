@@ -4,6 +4,7 @@ class Rectangle
   public int Width {get; private set;}
   public int Height {get; private set;}
 
+
   // Constructor
   public Rectangle(int width, int height)
   {
@@ -18,6 +19,3 @@ class ShapeMeasurementCalculator()
 
   public int CalculateArea(Rectangle rectangle) => rectangle.Width * rectangle.Height;
 }
- 
-
-
