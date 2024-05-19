@@ -23,5 +23,7 @@ var person = new Person
   YearOfBirth = 1996
 };
 
-var d = DateTime.UtcNow.DayOfYear;
-System.Console.WriteLine(d);
+// Using static classes
+var addNums = Calculator.Add(1,2);
+
+
