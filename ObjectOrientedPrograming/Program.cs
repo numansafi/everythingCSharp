@@ -25,5 +25,3 @@ var person = new Person
 
 // Using static classes
 var addNums = Calculator.Add(1,2);
-
-
