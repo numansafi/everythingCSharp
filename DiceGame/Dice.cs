@@ -1,4 +1,6 @@
-class Dice
+public class Dice
 {
-  public int DiceRoll { get; init;}
+  private const int sidesCount = 6;
+
+  public int Roll() => RandomNumber.Generate(1, sidesCount);
 }
