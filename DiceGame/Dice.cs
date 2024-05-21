@@ -1,9 +1,4 @@
 class Dice
 {
-  public int DiceRoll { get; }
-
-  public Dice(int diceRoll)
-  {
-    DiceRoll = diceRoll;
-  }
+  public int DiceRoll { get; init;}
 }
