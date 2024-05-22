@@ -1,33 +1,34 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-var pizza = new Pizza();
-pizza.AddIngredient(new Cheddar());
-pizza.AddIngredient(new TomatoSauce());
-pizza.AddIngredient(new Mozzarella());
+Cheddar cheddar = new Cheddar();
+Console.WriteLine(cheddar.Name);
+
+Ingredient ingredient = new Cheddar();
+Console.WriteLine(ingredient.Name);
 
 // Inheritance
 
 public class Ingredient
 {
-  
+  public virtual string Name { get; set; } = "Some ingredient";
 }
 
 public class Cheddar : Ingredient
 {
-  public string Name => "Cheddar Cheese";
+  public override string Name => "Cheddar Cheese";
   public int AgeForMonths {get;}
 }
 
 public class TomatoSauce : Ingredient
 {
-  public string Name => "Tomato sauce";
+  public override string Name => "Tomato sauce";
   public int TomatoesIn100Grams {get;}
 }
 
 public class Mozzarella : Ingredient
 {
-  public string Name => "Mozzarella";
+  public override string Name => "Mozzarella";
   public bool IsLight {get;}
 }
 
