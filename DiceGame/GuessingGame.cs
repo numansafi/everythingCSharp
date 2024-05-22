@@ -11,7 +11,7 @@ public class GuessingGame
     public void Play()
   {
     Console.WriteLine("Dice rolled, Guess what number it shows in 3 tries");
-
+ 
     bool userGuessCorrect;
     var diceRoll = _dice.Roll();
     do
