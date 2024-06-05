@@ -24,7 +24,7 @@ public class Ingredient
 
 public class Cheddar : Ingredient
 {
-  public override string Name => "Cheddar Cheese";
+  public override string Name {get; set;} = "Cheddar Cheese";
   public int AgeForMonths {get;}
 }
 
